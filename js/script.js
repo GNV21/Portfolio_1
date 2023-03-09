@@ -106,7 +106,7 @@ function bodyUnLock() {
     },timeOut);
 }
 
-document.addEventListener("keydown", function(e){
+document.addEventListener("keydown", function(event){
     console.log(event.code);
     if(event.code == 'Escape'){
         const popupActive = document.querySelector('.popup.open');
