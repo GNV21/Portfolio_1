@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/itc-slider/itc-slider.min.css">
     <link rel="stylesheet" href="./css/main.css">
     <title>Web-studio</title>
 </head>
@@ -33,7 +34,7 @@
         <div class="banner__inner container">
             <div class="banner__body">
                     <div class="banner__title">
-                Гарантированно привлечем X2 и больше клиентов в месяц!
+                Гарантировано привлечем X2 и больше клиентов в месяц!
                 </div>
                 <div class="banner__text">
                     Создание, настройка и продвижение
@@ -49,7 +50,7 @@
         <div class="services__inner container">
             <div class="services__up">
                 <div class="services__title">Наши услуги</div>
-                <a class="services__button button popup__link" href="#popup">Оставить заявку</a>
+                <a class="services__button  services__button_up button popup__link" href="#popup">Оставить заявку</a>
             </div>
             <div class="services__body">
                 <div class="card-services__items">
@@ -164,8 +165,97 @@
                         </div>
                     </div>
                 </div>
+                <a class="services__button  services__button_bottom button popup__link" href="#popup">Оставить заявку</a>
             </div>
         </div>
+    </div>
+    <div class="quiz">
+        <div class="quiz__inner container">
+            <div class="quiz__desc">
+                <div class="quiz__title">План развития вашего бизнеса БЕСПЛАТНО</div>
+                <div class="quiz__text">
+                    Пройдите тест и получите маркетинговый план
+                    по увеличению прибыли для вашего бизнеса в 
+                    текущих реалиях. Займет не более 2 секунд
+                </div> 
+            </div>
+            <div class="quiz__body">
+                <div class="itc-slider" data-slider="itc-slider" data-loop="false" data-autoplay="false">
+                    <div class="itc-slider__wrapper">
+                        <div class="itc-slider__title">
+                            Ответьте на 5 простых вопросов
+                        </div>
+                        <div class="itc-slider__items">
+                            <div class="itc-slider__item">
+                            <!-- Контент 1 слайда -->
+                                <div class="itc-slider__item-title">
+                                    Укажите сферу деятельности вашей компании:
+                                </div>
+                                <div class = "itc-slider__input_1">
+                                    <input type="radio" checked name="field">Сфера деятельности
+                                </div>    
+                                <div class = "itc-slider__input_1">
+                                    <input type="radio" name="field">Сфера деятельности
+                                </div>  
+                                <div class = "itc-slider__input_1">
+                                    <input type="radio" checked name="field">Сфера деятельности
+                                </div>    
+                                <div class = "itc-slider__input_1">
+                                    <input type="radio" name="field" >Сфера деятельности
+                                </div>  
+                            </div>
+                            <div class="itc-slider__item">
+                            <!-- Контент 2 слайда -->
+                                <div class="itc-slider__item-title">
+                                    В каком городе вы работаете?
+                                </div>
+                                <input class = "itc-slider__input_2" type="text" placeholder="Название города" name="cityname">
+                            </div>
+                            <div class="itc-slider__item">
+                            <!-- Контент 3 слайда -->
+                                <div class="itc-slider__item-title">
+                                    Ваш месячный бюджет на рекламу:
+                                </div>
+                                <div class = "itc-slider__input_1">
+                                    <input type="radio" checked name="field">До 30.000 руб
+                                </div>  
+                                <div class = "itc-slider__input_1">
+                                    <input type="radio" checked name="field">До 30.000 руб
+                                </div>  
+                                <div class = "itc-slider__input_1">
+                                    <input type="radio" checked name="field">До 30.000 руб
+                                </div>  
+                                <div class = "itc-slider__input_1">
+                                    <input type="radio" checked name="field">До 30.000 руб
+                                </div>  
+                                <div class = "itc-slider__input_1">
+                                    <input type="radio" checked name="field">До 30.000 руб
+                                </div>  
+                            </div>
+                            <div class="itc-slider__item">
+                            <!-- Контент 4 слайда -->
+                            <div class="itc-slider__item-title">
+                                Ссылка на ваш сайт или ваш email:
+                            </div>
+                            <input class = "itc-slider__input_2" type="text" placeholder="Напишите что-нибудь" name="cityname">
+                            </div>
+                            <div class="itc-slider__item">
+                            <!-- Контент 5 слайда -->
+                                <div class="itc-slider__item-title itc-slider__item-title_1">Укажите контактые данные для получения результата</div>
+                                <form action="#" method="get" class="popup__form"> 
+                                    <input class= "itc-slider__input_2" type="text" placeholder="Ваше имя" name="username" tabindex="1">
+                                    <input class= "itc-slider__input_2" type="tel" name="tel" tabindex="2" placeholder="Ваш номер">
+                                    <button class="button  itc-slider__button" type="submit">Отправить</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="itc-slider__btn itc-slider__btn_prev"></button>
+                    <button class="itc-slider__btn itc-slider__btn_next"></button>
+                </div>
+            </div>
+        </div>
+        
     </div>
     <div  id="popup" class="popup">
         <a href="##" class="popup__area"></a>
@@ -183,5 +273,6 @@
         </div>
     </div>
     <script src="./js/script.js"></script>
+    <script src="./js/itc-slider/itc-slider.min.js"></script>
 </body>
 </html>
