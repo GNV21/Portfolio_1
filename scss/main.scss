@@ -13,9 +13,6 @@
 .container {
     max-width: 1270px;
     margin: 0 auto;
-    @media(max-width: 1024px) {
-        max-width: 870px;
-    }
 }
 .header {
     width: 100%;
@@ -23,7 +20,7 @@
     top: 0;
     z-index: 5;
     width: 100%;
-    background-color: #f1f1f1;
+    background-color: #343434;
 	&__inner {
         height: 70px;
         display: flex;
@@ -47,7 +44,7 @@
 	&__item {
         margin-right: 20px;
         text-decoration: none;
-        color: #000000;
+        color: #fff;
 	}
     &__item:hover{
         color: blue;
@@ -62,6 +59,9 @@
         }
         &__item{
             margin-right: 10px;
+        }
+        &__item:last-child{
+            margin-right: 0;
         }
     }
     @media(max-width: 901px){
@@ -249,7 +249,9 @@
 }
 .services {
     background-color: #f1f1f1;
+    height: 100%;
     &__inner {
+        margin-bottom: 30px;
     }
     &__up {
         display: flex;
@@ -257,15 +259,17 @@
         padding: 0 10px;
     }
     &__title {
-        margin-top: 60px;
+        padding-top: 20px;
+        margin-top: 50px;
         font-size: 36px;
         font-weight: 600;
     }
     &__button {
-        margin-top: 60px;
+        margin-top: 80px;
     }
     &__button_bottom{
         display: none;
+        margin-bottom: 30px;
     }
     &__body {  
         margin-top: 30px;
@@ -279,8 +283,12 @@
         }
         &__button_bottom{
             display: block;
-            margin: 20px 15% 0;
+            margin: 0 15%;
             text-align: center;
+        }
+        &__bottom{
+            padding: 30px 0;
+            background-color: #f1f1f1;
         }
     }
 }
@@ -288,20 +296,22 @@
     &__items {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        padding: 0 20px;
+        padding: 0 20px 40px;
+        margin-bottom: 20px;
     }
     &__item {
         max-width: 400px;
         background-color: #fff;
         margin: 20px 10px;
         display: flex;
-        flex-direction: column;
+        flex-direction: column; 
+        border-radius: 10px;
     }
 
     &__img{   
+        border-radius: 10px;
         max-width: 100%;
         max-height: auto;
-        border-radius: 10px;
     } 
     &__body{
         margin-top: 10px;
@@ -352,7 +362,7 @@
         align-items: center;
     }
     &__more img{
-        margin-left: 10px;
+        margin-left: 5px;
         width: 10px;
         height: 10px;
     }
@@ -362,7 +372,7 @@
             padding: 0 15px;
         }
     }
-    @media(max-width: 500px) {
+    @media(max-width: 530px) {
         &__items{
         grid-template-columns: repeat(1, 1fr);
         }
@@ -426,6 +436,9 @@
         text-decoration: none;
         font-size: 30px;
         color: #000000;
+    }
+    &__close:hover{
+        color: red;
     }
     &__close:target &__content{
         opacity: 0;
@@ -491,39 +504,60 @@
         display: flex;
         justify-content: space-between;
         margin-top: 40px;
-        margin-bottom: 300px;
     }
     &__desc {
+        padding-left: 15px;
+        margin-right: 30px;
     }
 
     &__title {
-        font-size: 28px;
+        font-size: 36px;
         font-weight: 600;
-        width: 80%;
         margin-bottom: 40px;
     }
     &__text {
+        font-size: 18px;
         font-weight: 500;
         width: 80%;
     }
-    &__body {
-        width: 80%;
+    &__body {        
+        max-width: 570px;
         height: 100%;
-        border: 1px solid #e5e5e5;
-        border-radius: 20px;
-        max-width: 700px;
         margin: 0 auto;
+    }
+    @media (max-width: 1024px){
+        &__inner{
+            justify-content: center;
+            flex-direction: column;
+        }
+        &__desc{
+            margin-bottom: 40px;
+        }
+        &__title{
+            font-size: 22px;
+            text-align: center;
+            padding: 0 15px;
+            margin-bottom: 20px;
+        }
+        &__text{
+            text-align: center;
+            width: 100%;
+            padding: 0 20px;
+        }
     }
 }
 .itc-slider {
+    border-radius: 20px;
     &__wrapper {
+        border-radius: 20px;
+        border: 1px solid #000000;
     }
-
     &__title {
         padding: 30px;
         text-align: center;
         font-weight: 500;
         font-size: 24px;
+        border: 1px solid #e5e5e5;
     }
 
     &__items {
@@ -532,10 +566,7 @@
     }
 
     &__item {
-        flex: 0 0 100%;
-        max-width: 100%;
         counter-increment: slide;
-        height: 450px;
         position: relative;
         background-color: #9c27b0;
     }
@@ -551,8 +582,8 @@
         display: block;
     }
     &__item-title{
-        font-size: 26px;
-        font-weight: 500;
+        font-size: 22px;
+        font-weight: 600;
         text-align: center;
         margin: 60px 0 30px;
     }
@@ -561,9 +592,8 @@
         margin: 60px auto 30px;
     }
     &__input_1{
-        font-size: 22px;
         margin-left: 40px;
-        font-weight: 600;
+        font-weight: 400;
         padding-bottom: 20px;
     }
     &__input_2{
@@ -584,4 +614,85 @@
         width: 50%;
         margin: 40px auto;
     }
+    @media(max-width: 600px){
+        
+    }
 }
+.billing {
+    background-color: #e5e5e5;
+    &__inner {
+        margin-top: 40px;
+    }
+    &__title {
+        margin-top: 30px;
+        text-align: center;
+        padding-top: 80px;
+        font-size: 36px;
+        font-weight: 600;
+    }
+    &__body {
+        display: flex;
+        margin: 20px auto;
+    }
+    &__items{
+        display: flex;
+        margin: 30px auto 0;
+        padding: 0 10px;
+        padding-bottom: 40px;
+    }
+    &__item{
+        display: flex;
+        flex-direction: column;
+        flex: 0 1 33.333%;
+        margin: 0 20px 0 0;
+        border-radius: 10px;
+        border: 2.5px solid #000000;
+        background-color: #fff;
+    }
+    &__item:last-child{
+        margin-right: 0;
+    }
+    &__subtitle{
+        padding: 30px;
+        text-align: center;
+        font-size: 22px;
+        font-weight: 500;
+        background-color:rgba(255, 0, 0, 0.18)
+    }
+    &__price {
+        padding: 20px;
+        font-size: 40px;
+        font-weight: 600;
+        text-align: center;
+    }
+    &__price span{
+        font-size: 80%;
+        font-weight: 500;
+        color: #9d9d9d;
+    }
+    &__text {
+        margin: 0px 20px 20px;
+        flex: 1 1 auto;
+        text-align: center;
+    }
+    &__button {
+        text-align: center;
+        margin: 20px auto;
+        min-width: 150px;
+    }
+    @media(max-width: 768px){
+        &__items{
+            display: block;
+            padding: 0 15px;
+        }
+        &__item{
+            display: block;
+            max-width: 400px;
+            margin: 0 auto 20px;
+        }
+    }
+    &__button{
+        margin: 20px 10%;
+    }
+}
+
