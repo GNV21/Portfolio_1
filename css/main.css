@@ -494,6 +494,9 @@
   outline: none;
 }
 
+.quiz {
+  padding-bottom: 50px;
+}
 .quiz__inner {
   display: flex;
   justify-content: space-between;
