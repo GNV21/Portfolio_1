@@ -35,6 +35,7 @@ html{
         font-size: 30px;
         font-weight: 600;
         margin-right: 20px;
+        color: red;
 	}
 }
 
@@ -49,7 +50,7 @@ html{
         color: #fff;
 	}
     &__item:hover{
-        color: blue;
+        color: red;
     }
     &__burger{
         display: none;
@@ -502,7 +503,7 @@ html{
     }
 }
 .quiz {
-    padding-bottom: 50px;
+    padding: 20px 0 50px;
     &__inner {
         display: flex;
         justify-content: space-between;
@@ -571,7 +572,7 @@ html{
     &__item {
         counter-increment: slide;
         position: relative;
-        background-color: #9c27b0;
+        background-color: #ff6767;
     }
     &__item::before{
         content: counter(slide) "/5";
@@ -636,12 +637,12 @@ html{
     &__body {
         display: flex;
         margin: 20px auto;
+        padding-bottom: 50px;
     }
     &__items{
         display: flex;
         margin: 30px auto 0;
         padding: 0 10px;
-        padding-bottom: 40px;
     }
     &__item{
         display: flex;
@@ -698,4 +699,71 @@ html{
         margin: 20px 10%;
     }
 }
+.portfolio {
+    &__inner { 
+        padding-bottom: 300px;
+        margin-top: -10px;
+    }
 
+    &__title {
+        padding-top: 80px;
+        text-align: center;
+        font-size: 36px;
+        font-weight: 600;
+    }
+    &__body {
+    }
+
+    &__items {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    &__item{
+        max-width: 370px;
+        max-height: 260px;
+        padding: 0 auto;
+        margin: 20px 10px;
+        text-decoration: none;
+        border-radius: 10px;
+        background-image: linear-gradient(rgba(255, 255, 255, 0.31), rgba(0, 0, 0, 0.803)), url(./../imag/work.svg);
+    }
+    &__item:hover{
+        cursor: pointer;
+        background-image: linear-gradient(rgba(255, 255, 255, 0.127), rgba(0, 0, 0, 0.567)), url(./../imag/work.svg);
+    }
+    &__item-title {
+        color: #ffffff;
+        font-size: 30px;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item-text {
+        color: #FFFFFF;
+        font-size: 20px;
+        padding: 20px;
+    }
+    @media(max-width: 1024px){
+        &__items {
+            grid-template-columns: repeat(2, 1fr);
+            margin: 40px auto;
+            padding: 0 15px;
+        }
+        &__item{
+            margin: 20px 20px 20px auto;
+        }
+    }
+    @media(max-width: 648px){
+        &__items{
+            grid-template-columns: repeat(1, 1fr);
+        }
+        &__item{
+            max-width: 450px;
+            max-height: auto;
+            min-height: 200px;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(0, 0, 0, 0.8)), url(./../imag/work.svg) no-repeat;
+            margin: 0 auto 40px;
+        }
+    }
+}
