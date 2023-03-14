@@ -10,6 +10,11 @@ function menu(event){
         navBurger.classList.toggle('active');
         navItem.classList.toggle('active');
     }
+    if(event.target.closest('.nav__item')){
+        navMenu.classList.remove('active');
+        navBurger.classList.remove('active');
+        navItem.classList.remove('active');
+    }
 }
 
 //==============================================================
