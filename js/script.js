@@ -122,6 +122,71 @@ document.addEventListener("keydown", function(event){
 //=======================================================================================
 
 // Инициализируем swiper 
+new Swiper('.quiz-slider',{
+    navigation: {
+        nextEl: '.quiz-button-next',
+        prevEl: '.quiz-button-prev'
+    },  
+    pagination: {
+        el: '.quiz-pagination',
+        // Фракция
+        type: 'fraction',
+        // Кастомный вывод фракции
+        renderFraction: function(currentClass, totalClass){
+            return 'Вопрос <span class="' + currentClass + '"></span>' +
+            ' из ' +
+            '<span class="' + totalClass + '"></span>';
+        },
+    },
+    // Перетаскивания на пк
+    simulateTouch: true,
+    // Чувствительность свайпа
+    touchRatio: 0,
+    // Угол срабатывания свайпа/перетаскивания
+    touchAngle: 45,
+    // Курсор перетаскивания
+    grabCursor: true,
+    // Переключение при клике на слайд
+    slideToClickedSlide: true,
+    // Навигация по хешу
+    hashNavigation: {
+        // Отслеживать состояние
+        watchStte: true,
+    },
+    // Управление клавиатурой 
+    keyboard: {
+        // Включить/выключить
+        enabled: true,
+        // Включить/выключить только когда слайдер в пределах вьюпорта
+        onlyViewport: true,
+         // Включить/выключить управления клавишами
+         // pageUp, pageDown
+        pageUpDown: true, 
+    },
+    // Автовысота
+    autoHeight: false,
+    // Количество слайдов для показа
+    slidesPerView: 1,
+    // Отключение функционала если слайдов меньше чем нужно
+    watchOverflow: true,
+    // Отступ между слайдами
+    spaceBetween: 0,
+    // Количество пролистываемых слайдов
+    slidesPerGroup: 1,
+    // Активный слайд по центру
+    centeredSlides: false,
+    // Стартовый слайд
+    initialSlide: 0,
+    // Бесконечный слайдер
+    loop: false,
+    // Кол-во дублируемых слайдов
+    loopedSlides: 0,
+    // Свободный режим
+    freeMode: true,
+
+}),
+
+// Инициализируем swiper 
 new Swiper('.team-slider',{
     navigation: {
         nextEl: '.team-next',
@@ -135,16 +200,13 @@ new Swiper('.team-slider',{
     touchAngle: 45,
     // Курсор перетаскивания
     grabCursor: true,
-
     // Переключение при клике на слайд
     slideToClickedSlide: true,
-
     // Навигация по хешу
     hashNavigation: {
         // Отслеживать состояние
         watchStte: true,
     },
-
     // Управление клавиатурой 
     keyboard: {
         // Включить/выключить
@@ -154,13 +216,6 @@ new Swiper('.team-slider',{
         // Включить/выключить управления клавишами
         // pageUp, pageDown
         pageUpDown: true, 
-    },
-    // Управление колесом мыши
-    mousewheel: {
-        // Чувствительность колеса мыши
-        sensitivity: 1,
-        // Класс объекта на котором будет срабатывать прокрутка
-        eventsTarget: ".team-slider",
     },
     // Автовысота
     autoHeight: false,
