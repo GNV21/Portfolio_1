@@ -15,13 +15,15 @@ html{
 .container {
     max-width: 1270px;
     margin: 0 auto;
+    overflow: hidden;
 }
 .header {
-    width: 100%;
     position: fixed;
     top: 0;
+    left: 0;
     z-index: 5;
     width: 100%;
+    margin-right: 80%;
     background-color: #343434;
 	&__inner {
         height: 70px;
@@ -31,6 +33,7 @@ html{
         padding: 0 10px;
 	}
 	&__logo {
+        justify-content: start;
         text-decoration: none;
         font-size: 30px;
         font-weight: 600;
@@ -38,7 +41,6 @@ html{
         color: red;
 	}
 }
-
 .nav {
 	&__list {
         font-size: 20px;
@@ -631,6 +633,7 @@ html{
     background-color: #e5e5e5;
     &__inner {
         margin-top: 40px;
+        padding-bottom: 40px;
     }
     &__title {
         margin-top: 30px;
@@ -706,8 +709,8 @@ html{
 }
 .portfolio {
     &__inner { 
-        padding-bottom: 30px;
-        margin-top: -10px;
+        padding-bottom: 60px;
+        margin-top: -20px;
     }
 
     &__title {
@@ -779,10 +782,9 @@ html{
 .stages {
     background-color: #e5e5e5; 
     &__inner {
-        padding-bottom: 40px;
+        padding: 80px 0 80px 0
     }
     &__title {
-        padding-top: 40px;
         text-align: center;
         font-size: 36px;
         font-weight: 600;
@@ -855,11 +857,11 @@ html{
         }
     }
 }
+
 .advantages {
-
     &__inner {
+        margin-top: -20px;
     }
-
     &__title {
         padding-top: 80px;
         text-align: center;
@@ -868,23 +870,20 @@ html{
     }
 
     &__body {
+        padding-bottom: 80px;
     }
 
     &__list {
         display: flex;
         flex-wrap: wrap;
         padding: 0 15px;
-        margin-top: 30px;
+        margin: 30px auto 0;
     }
     &__item {
         display: flex;  
         flex-direction: column;
         flex: 0 1 33.3333%;
-        align-items: center;
         margin-top: 20px;
-    }
-    &__item-icon{
-        margin: 0 90% 0 10%;
     }
     &__item-body {
         padding-right: 20px;
@@ -913,14 +912,67 @@ html{
         }
         &__item {
             flex: 0 1 100%;
-            justify-content: flex-start;
-        }
-        &__item-icon{
-            margin: 0 auto;
         }
         &__item-text{
             max-width: 320px;
         }
     }
+}
+
+.team {
+    background-color: #e5e5e5;
+    &__inner {
+    }
+    &__title {
+        padding-top: 80px;
+        text-align: center;
+        font-size: 36px;
+        font-weight: 600;
+    }
+    &__nav{
+        display: flex;
+        justify-content: space-between;
+        width: 280px;
+        color: #9d9d9d;
+        padding-left: 15px;
+    }
+    &-next{
+        font-size: 70px;
+        font-weight: 700;
+        cursor: pointer;
+    }
+    &-next:hover{
+        color: #FF6060;
+    }
+    &-prev:hover{
+        color: #FF6060;
+    }
+    &-prev{
+        cursor: pointer;
+        font-size: 70px;
+        font-weight: 700;
+    }
+
+
+}
+.team-slider {
+	&__slide {
+	}
+	&__body {
+        max-width: 280px;
+	}
+    &__title {
+        font-size: 26px;
+        font-weight: 600;
+        display: flex;
+        flex-direction: column;
+        max-width: 260px;
+        padding-left: 10px;
+    }
+    &__title span{
+        color: #FF4040;
+    }
+	&__image {
+	}	   
 }
 

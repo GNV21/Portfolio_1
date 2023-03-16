@@ -120,3 +120,94 @@ document.addEventListener("keydown", function(event){
 });
 
 //=======================================================================================
+
+// Инициализируем swiper 
+new Swiper('.team-slider',{
+    navigation: {
+        nextEl: '.team-next',
+        prevEl: '.team-prev'
+    },
+    slideToClickedSlide: true,
+    simulateTouch: true,
+    // Чувствительность свайпа
+    touchRatio: 1,
+    // Угол срабатывания свайпа/перетаскивания
+    touchAngle: 45,
+    // Курсор перетаскивания
+    grabCursor: true,
+
+    // Переключение при клике на слайд
+    slideToClickedSlide: true,
+
+    // Навигация по хешу
+    hashNavigation: {
+        // Отслеживать состояние
+        watchStte: true,
+    },
+
+    // Управление клавиатурой 
+    keyboard: {
+        // Включить/выключить
+        enabled: true,
+        // Включить/выключить только когда слайдер в пределах вьюпорта
+        onlyViewport: true,
+        // Включить/выключить управления клавишами
+        // pageUp, pageDown
+        pageUpDown: true, 
+    },
+    // Управление колесом мыши
+    mousewheel: {
+        // Чувствительность колеса мыши
+        sensitivity: 1,
+        // Класс объекта на котором будет срабатывать прокрутка
+        eventsTarget: ".team-slider",
+    },
+    // Автовысота
+    autoHeight: false,
+    // Количество слайдов для показа
+    slidesPerView: 4,
+    // Отключение функционала если слайдов меньше чем нужно
+    watchOverflow: true,
+    // Отступ между слайдами
+    spaceBetween: 20,
+    // Количество пролистываемых слайдов
+    slidesPerGroup: 1,
+    // Активный слайд по центру
+    centeredSlides: false,
+    // Стартовый слайд
+    initialSlide: 0,    
+     // Бесконечный слайдер
+    loop: true,
+     // Кол-во дублируемых слайдов
+    loopedSlides: 0,
+     // Свободный режим
+    freeMode: true,
+    // Брейк поинты (адаптив)
+    // ширина экрана
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+        },
+        480: {
+            slidesPerView: 2,
+        },
+        992: {
+            slidesPerView: 3,
+        }
+    },
+    // Отключить предзагрузку картинок
+    preloadImages: false,
+    // Lazy Loading (Подзагрузка картинок)
+    lazy: {
+        // Подгружать на старте
+        // Переключения слайда
+        loadOnTransitionStart: false,
+        // Подгрузить картинки
+        // и следующую картинку
+        loadPrevNext: true,
+    },
+    // Слежка за видимыми слайдами
+    watchSlidesProgress: true,
+    // Добавление класса видимым слайдам 
+    watchSlidesVisibility: true,
+});
